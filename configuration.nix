@@ -119,6 +119,9 @@
   nixpkgs.config.permittedInsecurePackages = [
     "dotnet-sdk-6.0.136"
   ];
+  
+  # experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -154,6 +157,11 @@
     ffmpeg
     inetutils
     ghostty
+    kitty
+    fastfetch
+    cava
+    mpv
+    deno
   ];
 
   programs.nix-ld.enable = true;
